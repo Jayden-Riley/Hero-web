@@ -13,16 +13,28 @@ header{
     padding: 10px;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+   
 }
 .ham{
   height: 30px;
   width: 30px;
   border-radius: 50%;
   padding: 5px;
- 
+  border: 2px solid red;
+  /* align-self: flex-end; */
+  /* align-items: flex-end; */
+}
+.tank{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: ; */
+    padding: 20px;
+    border: 5px solid black;
 }
 .hero{
     background-image: url("https://img.freepik.com/premium-photo/woman-vr-dark-glowing-background_87498-3181.jpg");
+    /* background-image: url('https://images.unsplash.com/photo-1713946598596-5f7dcd4d8b41?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -31,11 +43,17 @@ header{
     position: relative;
     color: white;
 }
-.hero div{
+.hero::before {
+    content: "";
     position: absolute;
     inset: 0;
     background-color: rgb(129, 23, 129, 0.4);
 }
+/* .hero div{
+    position: absolute;
+    inset: 0;
+    background-color: rgb(129, 23, 129, 0.4);
+} */
 .hero h2{
     position: absolute;
     padding: 10px;
@@ -77,6 +95,13 @@ header{
 .con{
     gap: 26px;
     display: grid;
+    margin-top: 20px;
+}
+.creations::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(5, 0, 5, 0.377);
 }
 .creations h3{
     position: absolute;
@@ -120,4 +145,257 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+}
+#see {
+display: flex;
+justify-content: center;
+}
+#see a{
+    margin-top: 20px ;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 20px ; 
+   text-decoration: none;
+   display: inline-block;
+   text-transform: uppercase;
+}
+
+footer{
+    background-color: black;
+    color: rgb(206, 177, 124);
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+    padding: 65px 0;
+
+}
+footer h2 {
+text-align: center;
+font-size: 2.1em;
+}
+ .socials ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+footer ul li {
+list-style: none;
+
+text-align: center;
+
+
+}
+
+footer a {
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: 1.1em;
+}
+.socials {
+}
+footer nav ul {
+display: grid;
+    gap: 20px;
+    font-size: 1.1em;
+}
+svg {
+fill: beige;
+width: 40px;
+
+}
+.peek{
+    display: none;
+}
+.desktop-nav{
+    display: none;
+}
+@media only screen and (min-width: 1200px) {
+    header {
+        padding: 50px 100px;
+    }
+
+    header h1 {
+        font-size: 2.7em;
+
+    }
+
+    header img {
+        /* border: 2px solid #007bff; */
+        display: none;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    .p {
+        list-style: none;
+        /* Remove default bullet points */
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+        display: flex;
+        /* Use flexbox for horizontal alignment */
+        justify-content: center;
+        /* Center items horizontally (or use space-between/space-around as needed) */
+    }
+
+    .p li {
+        margin: 0 15px;
+        /* Optional: space between items */
+    }
+
+    .p li a {
+        text-decoration: none;
+        /* Remove underline from links */
+        color: #ddcfcf;
+        /* Optional: text color */
+        font-weight: bold;
+        /* Optional: make text bold */
+       transition:  1.2s;
+    }
+
+    ul.p li a:hover {
+        color: #007bff;
+        transform: scale(.9);
+    }
+
+
+    .hero {
+        /* border: 1px solid red; */
+        
+        height: 100vh;
+        width: 100%;
+    }
+
+    .hero .that {
+        position: absolute;
+        padding: 10px;
+        /* top: 50%; */
+        transform: translateY(-50%);
+        /* text-align: left; */
+        border: 2px solid white;
+        left: 5%;
+        /* right: 0; */
+        /* transform: translat(-50%, -50%); */
+        max-width: 400px;
+        text-transform: uppercase;
+        font-size: 45px;
+    }
+    .container{
+        padding-right: 580px;
+        display: flex;
+    }
+    .peek{
+         display: flex;
+         /* gap: 500px; */
+         justify-content: space-between;
+         padding: 10px 50px;
+    }
+   .peek h2{
+   
+    text-transform: uppercase;
+    color: dark rgb(75, 67, 67);
+   }
+   .peek h2:hover{
+    color: indigo;
+    transition: 2.3s;
+     }
+    
+   .creations h3{
+    color: white;
+    font-size: 150;
+    transform: rotate(1.2) ;
+   }
+   .creations h3:hover{
+    transition: 0.9s ease-in-out;
+    color: gray;
+   }
+    .peek a{
+        margin-top: 25px;
+        margin: 5px;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        /* text-align: center; 
+        text-align: center; */
+        font-weight: 150;
+        gap: 10px;
+        border: 2px solid black;
+        padding: 5px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: black;
+        transition: 0.7s ease-in-out;
+    }
+    .peek a:hover{
+        color: black;
+        background-color: rgb(151, 88, 197);
+        transform: scale(1.);
+     }
+    .containers h2{
+        display: none;
+    }
+
+    .vr {
+background-color: white;
+
+position: absolute;
+
+text-align: left;
+right: 100px;
+left: 45%;
+transform: translateY(-50%,);
+bottom: -69%;
+padding: 15px;
+font-size: 1.5em;
+font-weight: lighter;
+}
+     .vr p{
+
+     }
+     .con{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 90px;
+     }
+     .creations{
+        height: 420px;
+        /* background-color: rgba(5, 0, 5, 0.377); */
+        /* position: relative; */
+        gap: 20px;
+        border-radius: 5px;
+     }
+
+     
+#see a{
+    text-decoration: none;
+    color: pink;
+   padding-left: 20px;
+   display: none;
+}
+
+
+
+
+
+     footer{
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+     }
+     footer p{
+        font-size: 1.1em;
+        color: wheat;
+        
+     }
+     svg{
+        transition: transform 0.8s ease;
+        transform-style: preserve-3d;
+}
+
+     svg:hover{
+        transform: rotateX(10deg) rotateY(40deg);
+    }
+     
 }
