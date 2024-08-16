@@ -395,7 +395,7 @@ font-weight: lighter;
 }
 
      svg:hover{
-        transform: rotateX(10deg) rotateY(40deg);
+        transform: rotateX(20deg) rotateY(40deg);
     }
      
 }
